@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* change and personalise this pls */
+}
+
+.header {
+    /* check if <header or .header */
+    padding: 10px 90px;
+}
+
+.header, .footer {
+    /* Don't forget to check here if <header or .header! same with footer */
+    background-color: #1f2937;
+}
+
+.top-bar, .header-main-content {
+    display: flex;
+}
+
+.logo {
+    flex: 1 1 auto;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex: 1 1 auto;
+    gap: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a, .title-subtext {
+    font-size: 18px;
+    color: #E5e7eb;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.logo, .title, .sub-title {
+    color: #f9faf8;
+}
+
+.sub-title {
+    font-size: 30px;
+}
+
+.quote-section {
+    background-color: #e5e7eb;
+}
+
+.sign-up-container {
+    padding: 10px 90px;
+    /* put rounded edges on this */
+}
+
+.sign-up-box {
+    background-color: #3882F6;
+}
+
