@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* def need to clean up code, too many duplicates? see whats better duplicating descriptor or duplicating selectors */
 
 body {
     padding: 0;
@@ -9,17 +10,27 @@ body {
 
 .header {
     /* check if <header or .header */
-    padding: 10px 90px;
+    /*padding: 10px 250px; can't have so much padding cause messes up flex boxes when shrunken*/
+    /*padding: 10px 90px; /*edit this ir figure it out and have same padding for sign up*/
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    /*justify-content: ; /*why no work? kinda understand stretch = up and down and everything else but container has no space*/
 }
 
 .header, .footer {
     /* Don't forget to check here if <header or .header! same with footer */
     background-color: #1f2937;
+
 }
 
-.top-bar, .header-main-content {
+.top-bar, .header-main-info {
     display: flex;
 }
+
+.top-bar {
+    flex: 1 1 auto
+;}
 
 .logo {
     flex: 1 1 auto;
@@ -32,7 +43,7 @@ ul {
     margin: 0;
     list-style: none;
     display: flex;
-    flex: 1 1 auto;
+    flex: 1 1 auto; /*not too sure if I get how this works in practice, experiment with it a bit more*/
     gap: 20px;
 }
 
@@ -40,9 +51,31 @@ a {
     text-decoration: none;
 }
 
-a, .title-subtext {
+a, .title-subtext, .footer {
     font-size: 18px;
     color: #E5e7eb;
+}
+
+.header-content {
+    display: flex;
+    padding: 20px 0px;
+    /*justify-content: flex-center; /*just go over how this works... it doesn't seem to be working the way I think it does... yeeesh understand your divs man*/
+    gap: 10px;
+}
+
+.header-content, .sign-up-box {
+    max-width: 880px;
+}
+
+.header-main-info {
+    flex: 1 1 0;
+}
+/* check these two*/
+
+
+img {
+    height: auto;
+    width: 450px;
 }
 
 .title {
@@ -71,3 +104,7 @@ a, .title-subtext {
     background-color: #3882F6;
 }
 
+.footer {
+    padding: 30px;
+    text-align: center;
+}
