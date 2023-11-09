@@ -13,8 +13,8 @@ body {
     /*padding: 10px 250px; can't have so much padding cause messes up flex boxes when shrunken*/
     /*padding: 10px 90px; /*edit this ir figure it out and have same padding for sign up*/
     display: flex;
-    flex-flow: column;
     align-items: center;
+    flex-flow: column;
     /*justify-content: ; /*why no work? kinda understand stretch = up and down and everything else but container has no space*/
 }
 
@@ -24,16 +24,7 @@ body {
 
 }
 
-.top-bar, .header-main-info {
-    display: flex;
-}
-
-.top-bar {
-    flex: 1 1 auto
-;}
-
 .logo {
-    flex: 1 1 auto;
     font-size: 24px;
     font-weight: bold;
 }
@@ -43,8 +34,6 @@ ul {
     margin: 0;
     list-style: none;
     display: flex;
-    flex: 1 1 auto; /*not too sure if I get how this works in practice, experiment with it a bit more*/
-    gap: 20px;
 }
 
 a {
@@ -58,20 +47,21 @@ a, .title-subtext, .footer {
 
 .header-content {
     display: flex;
-    padding: 20px 0px;
-    /*justify-content: flex-center; /*just go over how this works... it doesn't seem to be working the way I think it does... yeeesh understand your divs man*/
-    gap: 10px;
 }
 
-.header-content, .sign-up-box {
+.header-content, .sign-up-box, .top-bar {
     max-width: 880px;
 }
 
-.header-main-info {
-    flex: 1 1 0;
+.top-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
-/* check these two*/
 
+.logo {
+    margin-right: auto;
+}
 
 img {
     height: auto;
@@ -93,11 +83,6 @@ img {
 
 .quote-section {
     background-color: #e5e7eb;
-}
-
-.sign-up-container {
-    padding: 10px 90px;
-    /* put rounded edges on this */
 }
 
 .sign-up-box {
