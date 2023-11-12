@@ -2,6 +2,16 @@
 
 /* def need to clean up code, too many duplicates? see whats better duplicating descriptor or duplicating selectors */
 
+/*add box content box thingy*/
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -27,6 +37,8 @@ body {
 .logo {
     font-size: 24px;
     font-weight: bold;
+    margin-right: auto;
+
 }
 
 ul {
@@ -40,7 +52,7 @@ a {
     text-decoration: none;
 }
 
-a, .title-subtext, .footer {
+a, .title-subtext, .footer, .sub-text{
     font-size: 18px;
     color: #E5e7eb;
 }
@@ -50,17 +62,13 @@ a, .title-subtext, .footer {
 }
 
 .header-content, .sign-up-box, .top-bar {
-    max-width: 880px;
+    max-width: 870px;
 }
 
 .top-bar {
     display: flex;
     align-items: center;
     width: 100%;
-}
-
-.logo {
-    margin-right: auto;
 }
 
 img {
@@ -73,7 +81,7 @@ img {
     font-weight: 900;
 }
 
-.logo, .title, .sub-title {
+.logo, .title, .sub-title, .main-text, button {
     color: #f9faf8;
 }
 
@@ -81,12 +89,47 @@ img {
     font-size: 30px;
 }
 
+button {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0px 25px; /*button is not going below a certain size for the sign up sheet button */
+    border-radius: 8px;
+}
+
 .quote-section {
     background-color: #e5e7eb;
 }
 
 .sign-up-box {
+    width: 100%;
+    padding: 40px 80px;
+    display: flex;
+}
+
+.sign-up-box, button {
     background-color: #3882F6;
+}
+
+
+.sign-up-container {
+    display: flex;
+    padding: 80px;
+    justify-content: center;
+    /*rounded corners here please*/
+} /*use this (the text width and the spacing, to set max width!)*/
+
+.sign-up-box button {
+    margin-left: auto;
+    border: 2px solid  #f9faf8;
+}
+
+.header-main-info button {
+    border: transparent
+}
+
+.main-text {
+    font-weight: bold;
+    font-size: 23px;
 }
 
 .footer {
