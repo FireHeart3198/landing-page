@@ -2,6 +2,12 @@
 
 /* def need to clean up code, too many duplicates? see whats better duplicating descriptor or duplicating selectors */
 
+/* at greater zooms, things with minimum width stay that width but header and background coloured widths are shorter... check if width =100% has anything to do with it */
+
+/* check if button needs to be clickable */
+
+/* header and footer prob need to be header and footer (footer is not dropping to the end of the page on zoom out) */
+
 html {
     box-sizing: border-box;
 }
@@ -26,10 +32,18 @@ body {
     /*justify-content: ; /*why no work? kinda understand stretch = up and down and everything else but container has no space*/
 }
 
-.header, .footer {
+.header, footer {
     /* Don't forget to check here if <header or .header! same with footer */
     background-color: #1f2937;
 
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
 }
 
 .logo {
@@ -43,34 +57,31 @@ ul {
     margin: 0;
     list-style: none;
     display: flex;
+    gap: 27px;
 }
 
 a {
     text-decoration: none;
 }
 
-a, .title-subtext, .footer, .sub-text{
+a, .title-subtext, footer, .sub-text{
     font-size: 18px;
     color: #E5e7eb;
 }
 
 .header-content {
     display: flex;
+    padding: 90px;
+    gap: 10px;
+    min-width: 1000px;
+    max-width: 1250px;
 }
 
-.header-content, .sign-up-box, .top-bar {
+.sign-up-box, header {
     max-width: 1100px;
 }
 
-/*set min width for the header*/
-
-
-
-.top-bar {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
+/*you don't want to set set min width for the header (<header) cause it does funny things to the zoom (doesn't come in)*/
 
 img {
     height: auto;
@@ -79,7 +90,11 @@ img {
 
 .title {
     font-size: 48px;
-    font-weight: 900;
+    font-weight: 600;
+}
+
+.title, .title-subtext, .sub-title{
+    padding-bottom: 10px;
 }
 
 .logo, .title, .sub-title, .main-text, button {
@@ -88,6 +103,12 @@ img {
 
 .sub-title {
     font-size: 30px;
+}
+
+.profile-section-title {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 40px;
 }
 
 .profile-section {
@@ -99,6 +120,8 @@ img {
 .kangaroo-profiles {
     display: flex;
     flex-wrap: wrap;
+    gap: 35px;
+    padding-bottom: 90px;
 }
 
 .pic {
@@ -112,9 +135,16 @@ img {
     border: dotted darkgreen 5px;
 }
 
+.kangaroo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .info {
-    width: 20ch;
+    width: 14ch;
     text-align: center;
+    color: #818284;
 }
 
 button {
@@ -143,11 +173,12 @@ button {
     font-style: italic;
     color: #1f2937;
     max-width: 32ch;
+    padding-bottom: 20px;
 }
 
 .quoter {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 19px;
     margin-left: auto;
 }
 
@@ -184,7 +215,7 @@ button {
     font-size: 23px;
 }
 
-.footer {
+footer {
     padding: 30px;
     text-align: center;
 }
