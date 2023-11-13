@@ -4,10 +4,6 @@
 
 /* at greater zooms, things with minimum width stay that width but header and background coloured widths are shorter... check if width =100% has anything to do with it */
 
-/* check if button needs to be clickable */
-
-/* header and footer prob need to be header and footer (footer is not dropping to the end of the page on zoom out) */
-
 html {
     box-sizing: border-box;
 }
@@ -20,10 +16,12 @@ body {
     padding: 0;
     margin: 0;
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* change and personalise this pls */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .header {
-    /* check if <header or .header */
     /*padding: 10px 250px; can't have so much padding cause messes up flex boxes when shrunken*/
     /*padding: 10px 90px; /*edit this ir figure it out and have same padding for sign up*/
     display: flex;
@@ -37,7 +35,6 @@ body {
     background-color: #1f2937;
 
 }
-
 
 header {
     display: flex;
@@ -122,10 +119,12 @@ img {
     flex-wrap: wrap;
     gap: 35px;
     padding-bottom: 90px;
+    width: 100%;
+    max-width: 1000px;
 }
 
 .pic {
-    height: 200px;
+    height: 300px;
     width: auto;
     display: block;
     margin: auto;
@@ -139,10 +138,13 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
+    flex: 1 0 auto;
 }
 
 .info {
-    width: 14ch;
+    min-width: 14ch;
+    max-width: 20ch;
     text-align: center;
     color: #818284;
 }
@@ -194,7 +196,7 @@ button {
     background-color: #3882F6;
 }
 
-.sign-up-container {
+.sign-up-section {
     display: flex;
     padding: 80px;
     justify-content: center;
@@ -218,4 +220,5 @@ button {
 footer {
     padding: 30px;
     text-align: center;
+    margin-top: auto;
 }
