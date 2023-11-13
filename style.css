@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* def need to clean up code, too many duplicates? see whats better duplicating descriptor or duplicating selectors */
-
-/*add box content box thingy*/
 
 html {
     box-sizing: border-box;
@@ -38,7 +36,6 @@ body {
     font-size: 24px;
     font-weight: bold;
     margin-right: auto;
-
 }
 
 ul {
@@ -62,8 +59,12 @@ a, .title-subtext, .footer, .sub-text{
 }
 
 .header-content, .sign-up-box, .top-bar {
-    max-width: 870px;
+    max-width: 1100px;
 }
+
+/*set min width for the header*/
+
+
 
 .top-bar {
     display: flex;
@@ -89,33 +90,84 @@ img {
     font-size: 30px;
 }
 
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kangaroo-profiles {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pic {
+    height: 200px;
+    width: auto;
+    display: block;
+    margin: auto;
+}
+
+.kangaroo img {
+    border: dotted darkgreen 5px;
+}
+
+.info {
+    width: 20ch;
+    text-align: center;
+}
+
 button {
     font-size: 16px;
     font-weight: bold;
-    padding: 0px 25px; /*button is not going below a certain size for the sign up sheet button */
+    padding: 5px 25px;
     border-radius: 8px;
+    height: fit-content; /*makes button size fit to content rather than the width of the container*/
 }
 
 .quote-section {
     background-color: #e5e7eb;
+    display: flex;
+    justify-content: center;
+    padding: 90px;
+}
+
+.quote-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.quote {
+    font-size: 36px;
+    font-weight: 300;
+    font-style: italic;
+    color: #1f2937;
+    max-width: 32ch;
+}
+
+.quoter {
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: auto;
 }
 
 .sign-up-box {
     width: 100%;
     padding: 40px 80px;
     display: flex;
+    align-items: center;
+    border-radius: 5px;
 }
 
 .sign-up-box, button {
     background-color: #3882F6;
 }
 
-
 .sign-up-container {
     display: flex;
     padding: 80px;
     justify-content: center;
-    /*rounded corners here please*/
+    min-width: 950px;
 } /*use this (the text width and the spacing, to set max width!)*/
 
 .sign-up-box button {
